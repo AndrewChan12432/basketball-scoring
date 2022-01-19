@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/basketball-scoring/static/css/main.9fb54706.css",
+    "main.js": "/basketball-scoring/static/js/main.f858fdf1.js",
+    "static/media/buzzerSound.mpeg": "/basketball-scoring/static/media/buzzerSound.583ab3f1d48a4126753e.mpeg",
+    "index.html": "/basketball-scoring/index.html",
+    "main.9fb54706.css.map": "/basketball-scoring/static/css/main.9fb54706.css.map",
+    "main.f858fdf1.js.map": "/basketball-scoring/static/js/main.f858fdf1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9fb54706.css",
+    "static/js/main.f858fdf1.js"
+  ]
+}
