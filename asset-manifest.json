@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/basketball-scoring/static/css/main.9fb54706.css",
-    "main.js": "/basketball-scoring/static/js/main.35ccb88d.js",
+    "main.css": "/basketball-scoring/static/css/main.9244afad.css",
+    "main.js": "/basketball-scoring/static/js/main.86b594ae.js",
     "static/media/buzzerSound.mpeg": "/basketball-scoring/static/media/buzzerSound.583ab3f1d48a4126753e.mpeg",
     "index.html": "/basketball-scoring/index.html",
-    "main.9fb54706.css.map": "/basketball-scoring/static/css/main.9fb54706.css.map",
-    "main.35ccb88d.js.map": "/basketball-scoring/static/js/main.35ccb88d.js.map"
+    "main.9244afad.css.map": "/basketball-scoring/static/css/main.9244afad.css.map",
+    "main.86b594ae.js.map": "/basketball-scoring/static/js/main.86b594ae.js.map"
   },
   "entrypoints": [
-    "static/css/main.9fb54706.css",
-    "static/js/main.35ccb88d.js"
+    "static/css/main.9244afad.css",
+    "static/js/main.86b594ae.js"
   ]
 }
