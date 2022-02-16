@@ -19,28 +19,34 @@ a:hover {
 }
 
 .App {
-  background-image: url("http://www.cogssandakan.com/News/img/basketball.jpg");
+  background:rgba(0, 0, 0, 0.4) url(/public/sabri-tuzcu-dVhM3o9BVeg-unsplash.png);
   background-size: cover;
-  position: fixed;
+  background-blend-mode: darken;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.intro, .enter-time, .enter-name-A, .enter-name-B, .page-not-found {
+/* .intro, .enter-time, .enter-name-A, .enter-name-B, .page-not-found {
   height: 100vh;
-}
+} */
 
 /* clock */
 .scoreboard{
-  position: relative;
-  z-index: 100;
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, 0%);
+  z-index: 1;
 }
 .quater_change_style{
-  width: 130px; 
   cursor: pointer;
 }
 .quater_stlye{
-  padding: 9px;
+  padding: 5px;
+  margin-left: 10px;
   color: white;
 }
 
@@ -54,49 +60,65 @@ a:hover {
 .position_quater {
   display: flex;
   justify-content: center;
-  font-size: 17px;
+  font-size: 15px;
   margin: 5px 0px;
   text-align: center;
+  width: 165px;
 }
 #quater_change {
-  padding: 7px;
-  border: 2px solid white;
-  border-radius: 40px;
+  padding: 3px 25px;
+  border: 1px solid white;
+  border-radius: 1px;
   color: white;
 }
 .position_timer {
-  display: flex;
   padding : 5px;
   background: black;
-  border-radius: 5px;
-background-color: whitesmoke;
+  border-radius: 1px;
+  background-color: whitesmoke;
 }
-.timer_but, .timer_but1 {
-  padding: 3px;
-  margin-top: 5px;
+ .timer_but1 {
+  padding: 1px;
+  margin: 3px 0px;
   font-size: 12px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 2px;
   background: #dbe4e6;
-  
+}
+.timer_but{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px 0px;
+  font-size: 12px;
+  background: #dbe4e6;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 .timeoutstyle {
-  font-size: 15px;
+  font-size: 14px;
   cursor: pointer;
-  color: white;
+  color: whitesmoke;
+  background-color: #000;
   text-align: center;
-  width: 50%;
-  border-radius: 4px;
+  margin: 0 3px;
 }
 #myReset{
-  font-size: 10px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .changtime {
-  padding: 0px 5px;
-  border-radius: 3px;
-  background: #ff5757;
-  margin: 3px;
-  color: white;
+  display: flex;
+  justify-content: center;
+  width: 15px;
+  height: 20px;
+  border-radius: 1px;
+  background: #dddddd;
+  margin-right: 5px;
+  color: #272e38;
   cursor: pointer;
 }
 .timer_but1 {
@@ -113,13 +135,17 @@ background-color: whitesmoke;
   width: 45px;
   padding: 0;
 }
-
+.change_24{
+  flex: 1;
+}
+.display{
+  padding: 5px;
+}
 #clock .display, 
 #clock_1 .display_1{
 text-align:center;
-border-radius:6px;
+border-radius:1px;
 position:relative;
-  padding: 7px;
 }
 #clock_2 .display_2{
 text-align:center;
@@ -130,9 +156,6 @@ padding: 0px;
 #clock_2 .display_2{
   margin: 5px 0px;
 } 
-.light_clock{
-  margin-right: 5px
-}
 .half_white{
   display: flex;
   justify-content: center;
@@ -151,6 +174,11 @@ border-color:#272e38;
 background-color: white;
 border-color: white;	
 }
+.digits_1{
+  background: #dddddd;
+  padding: 5px;
+  flex: 1;
+}
 
 #clock.light .digits div.dots:before,
 #clock.light .digits div.dots:after,
@@ -168,7 +196,6 @@ box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
 }
 
 #clock_1.light .display_1{
-background-color:#dddddd;
 box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
 }
 #clock_2.light .display_2 {
@@ -524,27 +551,35 @@ top:25px;
 
 /* Count-points */
 .count-points{
-  position: absolute;
   width: 100vw;
-  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: whitesmoke;
 }
 .team-score h5{
   margin: 15px;
   font-size: 17px;
 }
+.count_score{
+  margin-right: 20%;
+}
 .teamA{
   position: relative;
-  left: 75px;
+  left: 6%;
+  text-align: center;
 }
 .teamB{
   position: relative;
-  right: 75px;
+  right: 6%;
+  text-align: center;
 }
 .teamA div{
   font-size: 60px;
   padding: 30px 60px;
   background-color: #900C3F;
-  border-radius: 30px;
+  border-radius: 2px;
   margin: 0px;
   min-width: 150px;
 }
@@ -552,7 +587,7 @@ top:25px;
   font-size: 60px;
   padding: 30px 60px;
   background-color: #2F7FBF;
-  border-radius: 30px;
+  border-radius: 2px;
   margin: 0px;
   min-width: 150px;
 }
@@ -564,65 +599,75 @@ top:25px;
 .players-score p{
   padding: 10px;
 }
-.black{
+/* .black{
   background-color: rgba(0,0,0,.5);
+} */
+.team-fouls{
+  position: relative;
+}
+.foul-counts{
+  position: absolute;
+  bottom: -15%;
 }
 .arrow-left{
   position: relative;
-  top: 6px;
-  left: 35px;
-  width: 0;
-  height: 0;
-  padding: 0;
+  bottom: -5%;
+  cursor: pointer;
   border-top: 10px solid transparent;
-  border-right: 30px solid #3d3b3b7d;
+  border-right: 20px solid ;
   border-bottom: 10px solid transparent;
 }
 .arrow-right{
   position: relative;
-  top: 6px;
-  right: 35px;
-  width: 0;
-  height: 0;
-  padding: 0;
+  bottom: -5%;
+  cursor: pointer;
+  color: rgba(0,0,0,.6);
   border-top: 10px solid transparent;
-  border-left: 30px solid #3d3b3b7d;
+  border-left: 20px solid ;
   border-bottom: 10px solid transparent;
 }
 .teamA-fouls{
   padding: 0px 8px; 
   background-color: #900C3F;
-  border-radius: 50%;
   text-align: center;
   min-width: 24px;
+  cursor: pointer;
 }
 .teamB-fouls{
   padding: 0px 8px;
   background-color: #2F7FBF;
-  border-radius: 50%;
   text-align: center;
   min-width: 24px;
+  cursor: pointer;
 }
 .no-display{
   display: none;
 }
 .player-div{
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   text-align: center;
   margin: 0 2px;
 }
 .player-div p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 22px;
+  width: 22px;
   margin: 0;
   padding: 0;
   color: #000;
   background-color: whitesmoke;
 }
 .foulBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: black !important;
   border: 1px solid black !important;
   height: 22px;
+  width:  22px;
 }
 .players-score-A{
   margin: 3px 0;
@@ -630,21 +675,20 @@ top:25px;
 .players-score-B{
   margin: 3px 0;
 }
-.players-score-A .team1Score{
+.team1Score{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 10px;
   height: 22px;
   width: 22px;
-  padding: 0 5px;
   color: whitesmoke;
+}
+.players-score-A .team1Score{
   background-color: #900C3F;
   border: 1px solid #900C3F;
 }
 .players-score-B .team1Score{
-  margin-bottom: 10px;
-  height: 22px;
-  width: 22px;
-  padding: 0 5px;
-  color: whitesmoke;
   background-color: #2F7FBF;
   border: 1px solid #2F7FBF;
 }
@@ -662,13 +706,10 @@ top:25px;
   padding: 0px 10px;
   margin: 0;
 }
-.foulBox{
-  color: black;
-  height: 22px;
-  width:  22px;
-}
 .foulColor{
-  color: whitesmoke
+  color: black;
+  background: #ffbd59 !important;
+  border: 1px solid #ffbd59 !important;
 }
 .players-score p:nth-child(1){
   background-color: whitesmoke;
@@ -682,11 +723,8 @@ top:25px;
 }
 .transform{
   display: block;
-  position: absolute;
-  bottom: 0;
 }
 .bground  {
-  position: fixed;
   display: none;
   width: 100%;
   height: 100%;
@@ -699,7 +737,7 @@ top:25px;
   cursor: pointer;
   }
   .button-add{
-    position: relative;
+    position: absolute;
     z-index:1000;
   }
   .button-special{
@@ -708,6 +746,30 @@ top:25px;
   }
   .display-it{
     display: block;
+  }
+/* ads */
+  .ads_settings{
+    position: fixed;
+    top: 0%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index:100;
+  }
+  .ads_settings iframe{
+    position: relative;
+  }
+  .bg_opacity{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    animation-name: fade-in;
+    animation-duration: 1s;
+
   }
 
 /* alert-portrait */
@@ -827,7 +889,6 @@ top:25px;
   
   .glow-red {
     background-color: #900C3F;
-    border-radius:50px;
     box-shadow: 0 0 8px #ea4c89, inset 0 0 8px #ea4c89;
     animation: pulse-red 2s linear 1s infinite;
   }
@@ -839,7 +900,234 @@ top:25px;
   
   .glow-blue {
     background-color: #2F7FBF;
-    border-radius:50px;
     box-shadow: 0 0 8px #ea4c89, inset 0 0 8px #ea4c89;
     animation: pulse-blue 2s linear 1s infinite;
   }
+  @keyframes fade-in {
+    from { opacity: 0;}
+    to { opacity: 0.95;}
+  }
+
+  /* RESPONSIVE */
+@media only screen and (min-width: 900px) {
+  #clock .digits div,
+#clock_1 .digits_1 div{
+text-align:left;
+position:relative;
+width: 34px;
+height: 50px;
+display:inline-block;
+margin: 5px;
+}
+    /* d1 */
+#clock .digits .d1,
+#clock_1 .digits_1 .d1{			height:6px;width:20px;top:0px;left:8px;}
+#clock .digits .d1:before,
+#clock_1 .digits_1 .d1:before{	border-width:0 3px 5px 0;border-right-color:inherit;left:-3px;}
+#clock .digits .d1:after,
+#clock_1 .digits_1 .d1:after{	border-width:0 0 5px 3px;border-left-color:inherit;right:-3px;}
+
+#clock_2 .digits_2 .d1{			height:2px;width:7px;top:3px;left:8px;}
+#clock_2 .digits_2 .d1:before{	border-width:0 2px 2px 0;border-right-color:inherit;left:-2px;}
+#clock_2 .digits_2 .d1:after{	border-width:0 0 2px 2px;border-left-color:inherit;right:-2px;}
+  /* d2 */
+#clock .digits .d2,
+#clock_1 .digits_1 .d2{     height:6px;width:16px;top:52%;left:10px;}
+#clock .digits .d2:before,
+#clock_1 .digits_1 .d2:before{	border-width:3px 4px 3px;border-right-color:inherit;left:-8px;}
+#clock .digits .d2:after,
+#clock_1 .digits_1 .d2:after{    	border-width:3px 4px 3px;border-left-color:inherit;right:-8px;}
+
+#clock_2 .digits_2 .d2{			    height: 2px;width: 9px;top: 15px;left: 7px;}
+#clock_2 .digits_2 .d2:before{	border-width:1px 3px 1px;border-right-color:inherit;left:-4.5px;}
+#clock_2 .digits_2 .d2:after{	 border-width:1px 3px 1px;border-left-color:inherit;right:-5px;}
+/* d3 */
+#clock .digits .d3,
+#clock_1 .digits_1 .d3 {    height:6px;width:20px; top:104%;left:8px;}
+#clock .digits .d3:before,
+#clock_1 .digits_1 .d3:before{	border-width:6px 3px 0 0;border-right-color:inherit;left:-3px;}
+#clock .digits .d3:after,
+#clock_1 .digits_1 .d3:after{	border-width:6px 0 0 3px;border-left-color:inherit;right:-3px;}
+
+#clock_2 .digits_2 .d3{			height:2px;width:7px;top:27px;left:8px;}
+#clock_2 .digits_2 .d3:before{	border-width:2px 2px 0 0;border-right-color:inherit;left:-2px;}
+#clock_2 .digits_2 .d3:after{	border-width:2px 0 0 2px;border-left-color:inherit;right:-2px;}
+/* d4 */
+#clock .digits .d4,
+#clock_1 .digits_1 .d4{			width:6px;height:20px;top:5px;left:1px;}
+#clock .digits .d4:before,
+#clock_1 .digits_1 .d4:before{	border-width:0 6px 4px 0;border-bottom-color:inherit;top:-3px;}
+#clock .digits .d4:after,
+#clock_1 .digits_1 .d4:after{	border-width:0 0 3px 6px;border-left-color:inherit;bottom:-3px;}
+
+#clock_2 .digits_2 .d4{			width:2px;height:7px;top:6px;left:5px;}
+#clock_2 .digits_2 .d4:before{	border-width:0 2px 2px 0;border-bottom-color:inherit;top:-2px;}
+#clock_2 .digits_2 .d4:after{	border-width:0 0 2px 2px;border-left-color:inherit;bottom:-2px;}
+/* d5 */
+#clock .digits .d5,
+#clock_1 .digits_1 .d5{			width:6px;height:20px;top:5px;right:-1px;}
+#clock .digits .d5:before,
+#clock_1 .digits_1 .d5:before{	border-width:0 0 4px 6px;border-bottom-color:inherit;top:-3px;}
+#clock .digits .d5:after,
+#clock_1 .digits_1 .d5:after{	border-width:3px 0 0 6px;border-top-color:inherit;bottom:-3px;}
+
+#clock_2 .digits_2 .d5{			width:2px;height:7px;top:6px;right:0;}
+#clock_2 .digits_2 .d5:before{	border-width:0 0 2px 2px;border-bottom-color:inherit;top:-2px;}
+#clock_2 .digits_2 .d5:after{	border-width:2px 0 0 2px;border-top-color:inherit;bottom:-2px;}
+/* d6 */
+#clock .digits .d6,
+#clock_1 .digits_1 .d6{			width:6px;height:20px; top:65%; left:1px;}
+#clock .digits .d6:before,
+#clock_1 .digits_1 .d6:before{	border-width:0 6px 4px 0;border-bottom-color:inherit;top:-3px;}
+#clock .digits .d6:after,
+#clock_1 .digits_1 .d6:after{	border-width:0 0 3px 6px;border-left-color:inherit;bottom:-3px;}
+
+#clock_2 .digits_2 .d6{			width:2px;height:7px;top:19px;left:5px;}
+#clock_2 .digits_2 .d6:before{	border-width:0 2px 2px 0;border-bottom-color:inherit;top:-2px;}
+#clock_2 .digits_2 .d6:after{	border-width:0 0 2px 2px;border-left-color:inherit;bottom:-2px;}
+/* d7 */
+#clock .digits .d7,
+#clock_1 .digits_1 .d7{			width:6px;height:20px; top:65%; right:-1px;}
+#clock .digits .d7:before,
+#clock_1 .digits_1 .d7:before{	border-width:0 0 3px 6px;border-bottom-color:inherit;top:-3px;}
+#clock .digits .d7:after,
+#clock_1 .digits_1 .d7:after{	border-width:3px 0 0 6px;border-top-color:inherit;bottom:-3px;}
+
+#clock_2 .digits_2 .d7{			width:2px;height:7px;top:19px;right:0px;}
+#clock_2 .digits_2 .d7:before{	border-width:0 0 2px 2px;border-bottom-color:inherit;top:-2px;}
+#clock_2 .digits_2 .d7:after{	border-width:2px 0 0 2px;border-top-color:inherit;bottom:-2px;}
+
+/* dot */
+#clock_1 .digits_1 div.dots{
+  margin: 0 10px;
+}
+
+#clock_1 .digits_1 div.dots:before,
+#clock_1 .digits_1 div.dots:after{
+width:6px;
+height:6px;
+top:10px;
+}
+
+#clock_1 .digits_1 div.dots:after{
+top: 30px;
+}
+.scoreboard{
+  top: 10%;
+}
+
+.player-score{
+  font-size: 20px;
+}
+.player-div p{
+  height: 35px;
+  width: 35px;
+}
+.team1Score{
+  width: 35px;
+  height: 35px;
+}
+.foulBox{
+  width: 35px;
+  height: 35px;
+}
+.player-score p{
+  padding: 3px 15px;
+}
+.player-div{
+  margin: 0 5px;
+}
+.foul-counts{
+  font-size: 25px;
+}
+.teamA-fouls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 35px;
+  height: 35px;
+
+}
+.teamB-fouls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 35px;
+  height: 35px;
+}
+.teamA div{
+  font-size: 70px;
+  padding: 50px 85px;
+}
+.teamB div{
+  font-size: 70px;
+  padding: 50px 85px;
+}
+.foul-counts p{
+  margin: 0 20px;
+}
+.arrow-left{
+  bottom: -15%;
+  border-top: 15px solid transparent;
+  border-right: 30px solid ;
+  border-bottom: 15px solid transparent;
+}
+.arrow-right{
+  bottom: -15%;
+  border-top: 15px solid transparent;
+  border-left: 30px solid ;
+  border-bottom: 15px solid transparent;
+}
+.position_quater {
+  width: 260px;
+  font-size: 1.5rem;
+  margin: 5px 0px;
+}
+#quater_change{
+  padding: 3px 30px;
+}
+.position_timer{
+  padding: 7px;
+}
+.change_24{
+  margin-left: 3px;
+}
+.timer_but{
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+}
+.timeoutstyle{
+  font-size: 20px;
+  margin: 3px;
+}
+.timer_but1{
+  font-size: 20px;
+  padding: 0;
+  margin: 5px 0px;
+}
+.foul-counts{
+  position: absolute;
+  bottom: -20%;
+}
+#myReset{
+  font-size: 25px;
+}
+.changtime{
+  width: 25px;
+  height: 35px;
+}
+h5{
+  font-size: 2rem;
+}
+}
+@media only screen and (max-width: 700px) and (orientation: landscape){
+ .players-score{
+   margin: 3px;
+ }
+ .player-div{
+   margin: 0 1px;
+ }
+}

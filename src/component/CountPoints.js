@@ -1,6 +1,22 @@
 import React from 'react'
 
 export default function CountPoints() {
+const cancelAds =()=> {
+    document.getElementById("ads").style.display = "none" 
+    }
+const changeColorLeft = () =>{
+    document.getElementsByClassName("arrow-left")[0].style.color = "whitesmoke";
+    document.getElementsByClassName("arrow-right")[0].style.color = "rgba(0,0,0,.6)";
+}
+const changeColorRight = () =>{
+    document.getElementsByClassName("arrow-right")[0].style.color = "whitesmoke";
+    document.getElementsByClassName("arrow-left")[0].style.color = "rgba(0,0,0,.6)";
+}
+const resetFouls = (e) =>{
+    e.target.innerHTML = 0;
+    e.target.classList.remove("glow-red", "glow-blue")
+}
+
 function checkFoul(e){
 e.target.classList.add("foulColor");
 let getElement = e.target.innerHTML;
@@ -31,8 +47,13 @@ if(e.target.id === "foulP1"){
 if(toNumber < 5) {
  toNumber++
  e.target.innerHTML = toNumber;
+}else if(e.target.innerHTML === ""){
+    console.log(toNumber)
+ toNumber = 1
+ e.target.innerHTML = toNumber;
 }else{
- console.log("over")
+ toNumber = 0
+ e.target.innerHTML = "";
 }
 }
 function showBtn(e){
@@ -97,35 +118,38 @@ function addScore(e) {
             }
             }
         }
+        console.log(findParent,buttonChange, buttonHtml)
 }
     return (
         <div className="count-points">
             <div className="black">
-                <div className="team-score d-flex justify-content-between text-center">
-                    <div className="teamA">
-                        <h5>teamA</h5>
-                        <div className="pointA">0</div>
-                    </div>
-                    <div className="teamB">
-                        <h5>teamB</h5>
-                        <div className="pointB">0</div>
-                    </div>
-                </div>
                     <div className="team-fouls d-flex justify-content-around">
-                        <div className="arrow-left"></div>
-                        <div className="foul-counts d-flex align-items-center">
-                           <div className="teamA-fouls">0</div>
-                           <p>Team Foul</p>
-                           <div className="teamB-fouls">0</div>
+                        <div className='count_score d-flex flex-column align-items-center'>
+                            <div className="teamA">
+                                <h5>teamA</h5>
+                                <div className="pointA">0</div>
+                            </div>
+                            <div className="arrow-left" onClick={changeColorLeft}></div>
                         </div>
-                        <div className="arrow-right"></div>
+                        <div className="foul-counts d-flex align-items-center">
+                           <div className="teamA-fouls" onClick={resetFouls}>0</div>
+                           <p>Team Foul</p>
+                           <div className="teamB-fouls" onClick={resetFouls}>0</div>
+                        </div>
+                        <div className='d-flex flex-column align-items-center'>
+                                <div className="teamB">
+                                <h5>teamB</h5>
+                                <div className="pointB">0</div>
+                            </div>
+                            <div className="arrow-right" onClick={changeColorRight}></div>
+                        </div>
                     </div>
             </div>
             <div className="player-score d-flex justify-content-center">
                 <div className="players-score-A d-flex">
                 <div className="player-div">
-                    <p>1</p>
-                    <button className="team1Score" id="player1Score" onClick={showBtn}>0</button>
+                        <p>1</p>
+                        <button className="team1Score" id="player1Score" onClick={showBtn}>0</button>
                     <div className="no-display">
                         <div className="button-add">
                         <button onClick={addScore}>+3</button>
@@ -489,6 +513,19 @@ function addScore(e) {
                     </div>
                     <button className="foulBox" id="foulP2" onClick={checkFoul}>0</button>
                 </div>
+                </div>
+            </div>
+            <div className='ads_settings no-display' id="ads">
+                <div className='bg_opacity' onClick={cancelAds}></div>
+                <div className='iframe_settins'>
+                    <p>Timeout</p>
+                    <iframe  src="https://www.youtube.com/embed/IdJBYyNsQd0" 
+                             width="560" height="315"  
+                             title="YouTube video player" 
+                             frameBorder="0" 
+                             allow="autoplay; encrypted-media;" 
+                             allowFullScreen 
+                    />
                 </div>
             </div>
         </div>

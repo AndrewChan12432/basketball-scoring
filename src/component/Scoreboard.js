@@ -128,23 +128,23 @@ const Sroceboard = () =>{
         digits.s2.attr('class', digit_to_name[9]);
     }
     //i = five[4] , k = two[7]
-    function update_timeout() {
-        digits.s6.attr('class', digit_to_name[varTimeOutS6]);
-        digits.s7.attr('class', digit_to_name[varTimeOutS7]);
-        varTimeOutS7++;
-        if (varTimeOutS7 === 10) {
-            varTimeOutS7 = 0;
-            varTimeOutS6++;
-        }
-        if (varTimeOutS6 >= 10) {
-            clearInterval(myTimeterval);
-            digits.s6.attr('class', digit_to_name[9]);
-            digits.s7.attr('class', digit_to_name[9]);
-            varTimeOutS6 = 4;
-            playVid();
-        }
+    // function update_timeout() {
+    //     digits.s6.attr('class', digit_to_name[varTimeOutS6]);
+    //     digits.s7.attr('class', digit_to_name[varTimeOutS7]);
+    //     varTimeOutS7++;
+    //     if (varTimeOutS7 === 10) {
+    //         varTimeOutS7 = 0;
+    //         varTimeOutS6++;
+    //     }
+    //     if (varTimeOutS6 >= 10) {
+    //         clearInterval(myTimeterval);
+    //         digits.s6.attr('class', digit_to_name[9]);
+    //         digits.s7.attr('class', digit_to_name[9]);
+    //         varTimeOutS6 = 4;
+    //         playVid();
+    //     }
 
-    };
+    // };
 
     function quater_change(x, y) {
         if (varQuater >= 5) {
@@ -233,8 +233,6 @@ const Sroceboard = () =>{
             playVid();
             digits.s2.attr('class', digit_to_name[9]);
             silentSet = true;
-        }else {
-
         }
         varMinS5++;
         if (varMinS5 >= 10) {
@@ -260,26 +258,26 @@ const Sroceboard = () =>{
         console.log(varMinM1, varMinS3_10)
     }
     $('#00s').click(silent);
-    $('#timeout').click(function () {
-        if (myTimeterval === -1) {
-            myTimeterval = setInterval(update_timeout, 1000);
-            myButton.html("Resume");
-            clearInterval(myInterval);
-            myInterval = -1;
-            myTimeButton.html('Cancel');
-            digits.s6.attr('class', digit_to_name[4]);
-            digits.s7.attr('class', digit_to_name[0]);
-        } else {
-            myTimeButton.html("Timeout");
-            clearInterval(myTimeterval);
-            myTimeterval = -1;
-            varTimeOutS7 = 1;
-            varTimeOutS6 = 4;
-            digits.s6.attr('class', digit_to_name[3]);
-            digits.s7.attr('class', digit_to_name[9]);
-        }
+    // $('#timeout').click(function () {
+    //     if (myTimeterval === -1) {
+    //         myTimeterval = setInterval(update_timeout, 1000);
+    //         myButton.html("Resume");
+    //         clearInterval(myInterval);
+    //         myInterval = -1;
+    //         myTimeButton.html('Cancel');
+    //         digits.s6.attr('class', digit_to_name[4]);
+    //         digits.s7.attr('class', digit_to_name[0]);
+    //     } else {
+    //         myTimeButton.html("Timeout");
+    //         clearInterval(myTimeterval);
+    //         myTimeterval = -1;
+    //         varTimeOutS7 = 1;
+    //         varTimeOutS6 = 4;
+    //         digits.s6.attr('class', digit_to_name[3]);
+    //         digits.s7.attr('class', digit_to_name[9]);
+    //     }
 
-    });
+    // });
     $('#quater_change').click(function () {
         varQuater++
         myQuater.html(digit_to_quater[varQuater]);

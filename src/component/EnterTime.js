@@ -18,6 +18,7 @@ export default function EnterTime(props) {
           } />
         <input className="mt-1 text-center" type="submit" value="Next" />
         </form>
+
       </div>
     </div>
   )

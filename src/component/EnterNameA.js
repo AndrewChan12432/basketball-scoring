@@ -8,7 +8,7 @@ export default function EnterNameA(props) {
     console.log(nameA)
   }
   return (
-    <div className="enter-name-A d-flex justify-content-center mt-3">
+    <div className="enter-name-A d-flex justify-content-center align-items-center mt-3">
       <div className="text-center label-3">
         <form onSubmit={handleSubmit} className="d-flex flex-column ">
         <label>Please enter team A's name and player's number:</label>
