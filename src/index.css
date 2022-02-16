@@ -70,6 +70,7 @@ a:hover {
   border: 1px solid white;
   border-radius: 1px;
   color: white;
+  flex: 1;
 }
 .position_timer {
   padding : 5px;
@@ -604,22 +605,25 @@ top:25px;
 } */
 .team-fouls{
   position: relative;
+  height: 120%;
 }
 .foul-counts{
   position: absolute;
-  bottom: -15%;
+  bottom: 0;
 }
 .arrow-left{
-  position: relative;
-  bottom: -5%;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-25%);
   cursor: pointer;
   border-top: 10px solid transparent;
   border-right: 20px solid ;
   border-bottom: 10px solid transparent;
 }
 .arrow-right{
-  position: relative;
-  bottom: -5%;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-25%);
   cursor: pointer;
   color: rgba(0,0,0,.6);
   border-top: 10px solid transparent;
@@ -639,6 +643,9 @@ top:25px;
   text-align: center;
   min-width: 24px;
   cursor: pointer;
+}
+.change_24{
+  margin: 0 3px;
 }
 .no-display{
   display: none;
@@ -1069,13 +1076,13 @@ top: 30px;
   margin: 0 20px;
 }
 .arrow-left{
-  bottom: -15%;
+  bottom: 0;
   border-top: 15px solid transparent;
   border-right: 30px solid ;
   border-bottom: 15px solid transparent;
 }
 .arrow-right{
-  bottom: -15%;
+  bottom: 0;
   border-top: 15px solid transparent;
   border-left: 30px solid ;
   border-bottom: 15px solid transparent;
@@ -1092,7 +1099,7 @@ top: 30px;
   padding: 7px;
 }
 .change_24{
-  margin-left: 3px;
+  margin: 0 5px;
 }
 .timer_but{
   font-size: 20px;
@@ -1110,7 +1117,11 @@ top: 30px;
 }
 .foul-counts{
   position: absolute;
-  bottom: -20%;
+  bottom: 0;
+}
+.team-fouls{
+  position: relative;
+  height: 130%;
 }
 #myReset{
   font-size: 25px;
