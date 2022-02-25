@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 
 export default function EnterNameA(props) {
-  const [nameA , setNameA] = useState("")
+  const [nameA , setNameA] = useState([
+    {}
+  ])
   const handleSubmit = (e) => {
     e.preventDefault();
     props.history.push('/enter-name-B')
+  }
+  const setName = (e) => {
+    setNameA(e.target.value);
     console.log(nameA)
   }
   return (
@@ -13,12 +18,12 @@ export default function EnterNameA(props) {
         <form onSubmit={handleSubmit} className="d-flex flex-column ">
         <label>Please enter team A's name and player's number:</label>
             <label>
-                Team A:<input type="text" name="teamA" onChange={(e) => setNameA(e.target.value)} />
+                Team A:<input type="text" name="teamA" onChange={setName} />
             </label>
             <div className="d-flex">
               <div className="d-flex flex-column">
                 <label>
-                  Player 1:<input type="text" name="player" onChange={(e) => setNameA(e.target.value)} />
+                  Player 1:<input type="text" name="player" onChange={setName} />
                 </label>
                 <label>
                   Player 2:<input type="text" name="player" onChange={(e) => setNameA(e.target.value)} />

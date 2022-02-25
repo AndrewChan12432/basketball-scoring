@@ -25,8 +25,8 @@ const Sroceboard = () =>{
     let position_1 = ['m1', 's3', ':', 's4', 's5']
     let position_2 = ['s6', 's7']
     //Variables of number fo timer
-    let varTimeOutS6 = 4;// Timeout
-    let varTimeOutS7 = 1;
+    // let varTimeOutS6 = 4;// Timeout
+    // let varTimeOutS7 = 1;
     let varQuater = 0; // Quater
     let var24_1 = 7; // 24s, 14s
     let var24_2 = 6; 
@@ -301,8 +301,8 @@ const Sroceboard = () =>{
             myTimeButton.html("Timeout");
             clearInterval(myTimeterval);
             myTimeterval = -1;
-            varTimeOutS7 = 1;
-            varTimeOutS6 = 4;
+            // varTimeOutS7 = 1;
+            // varTimeOutS6 = 4;
             digits.s6.attr('class', digit_to_name[3]);
             digits.s7.attr('class', digit_to_name[9]);
         }

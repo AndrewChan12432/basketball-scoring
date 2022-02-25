@@ -19,7 +19,7 @@ a:hover {
 }
 
 .App {
-  background:rgba(0, 0, 0, 0.4) url(/public/sabri-tuzcu-dVhM3o9BVeg-unsplash.png);
+  background:rgba(0, 0, 0, 0.9) url(/public/background.png);
   background-size: cover;
   background-blend-mode: darken;
   width: 100vw;
@@ -27,6 +27,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 }
 
 /* .intro, .enter-time, .enter-name-A, .enter-name-B, .page-not-found {
@@ -732,7 +733,7 @@ top:25px;
   display: block;
 }
 .bground  {
-  display: none;
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
