@@ -11,7 +11,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^5.0.0"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -36,7 +36,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
+  "devDependencies": { 
     "gh-pages": "^2.2.0"
   }
 }

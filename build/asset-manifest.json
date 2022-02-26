@@ -1,17 +1,15 @@
 {
   "files": {
-    "main.css": "/basketball-scoring/static/css/main.06008f0d.chunk.css",
-    "main.js": "/basketball-scoring/static/js/main.9b473d05.chunk.js",
-    "main.js.map": "/basketball-scoring/static/js/main.9b473d05.chunk.js.map",
-    "runtime~main.js": "/basketball-scoring/static/js/runtime~main.66b1e66c.js",
-    "runtime~main.js.map": "/basketball-scoring/static/js/runtime~main.66b1e66c.js.map",
-    "static/js/2.0dfbb3a7.chunk.js": "/basketball-scoring/static/js/2.0dfbb3a7.chunk.js",
-    "static/js/2.0dfbb3a7.chunk.js.map": "/basketball-scoring/static/js/2.0dfbb3a7.chunk.js.map",
+    "main.css": "/basketball-scoring/static/css/main.98c60520.css",
+    "main.js": "/basketball-scoring/static/js/main.6111ff61.js",
+    "static/media/background.png": "/basketball-scoring/static/media/background.b23e81d8ccaf995c8ef9.png",
+    "static/media/buzzerSound.mpeg": "/basketball-scoring/static/media/buzzerSound.583ab3f1d48a4126753e.mpeg",
     "index.html": "/basketball-scoring/index.html",
-    "precache-manifest.ad443d24c0d8c13f790fa84eb89425ef.js": "/basketball-scoring/precache-manifest.ad443d24c0d8c13f790fa84eb89425ef.js",
-    "service-worker.js": "/basketball-scoring/service-worker.js",
-    "static/css/main.06008f0d.chunk.css.map": "/basketball-scoring/static/css/main.06008f0d.chunk.css.map",
-    "static/media/background.png": "/basketball-scoring/static/media/background.b433cc26.png",
-    "static/media/buzzerSound.mpeg": "/basketball-scoring/static/media/buzzerSound.5b30c18a.mpeg"
-  }
+    "main.98c60520.css.map": "/basketball-scoring/static/css/main.98c60520.css.map",
+    "main.6111ff61.js.map": "/basketball-scoring/static/js/main.6111ff61.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98c60520.css",
+    "static/js/main.6111ff61.js"
+  ]
 }
